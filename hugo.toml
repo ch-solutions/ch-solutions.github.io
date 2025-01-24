@@ -68,17 +68,17 @@ enableGitInfo = true      # Enable Git info for lastmod
     title = "Ready to Get Started?"
     description = "Join companies using our platform"
     [params.cta.primary_button]
-      text = "Get Started Free"
-      url = "/get-started"
+      text = "Get Started"
+      url = "/pricing"
     [params.cta.secondary_button]
-      text = "Book Demo"
-      url = "/demo"
+      text = "View Courses"
+      url = "/courses"
 
   # Social Media Links (optional)
   [params.social]
-    linkedin = "https://linkedin.com/in/yourusername"
-    twitter = "https://twitter.com/yourusername"
-    github = "https://github.com/yourusername"
+    linkedin = "/"
+    twitter = "/"
+    github = "https://github.com/ch-solutions/ch-solutions.github.io"
 
 # Navigation Menu
 [menu]
