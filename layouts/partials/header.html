@@ -129,8 +129,17 @@
             transform: scale(1.1);
         }
 
+        .nav-content {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
         .nav-toggle:checked + .nav-content {
             display: block;
+            opacity: 1;
+            visibility: visible;
         }
     </style>
 </div>
