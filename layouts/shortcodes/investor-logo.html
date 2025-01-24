@@ -1,0 +1,42 @@
+<div class="investor-logo p-6 flex items-center justify-center">
+    <div class="logos-slide{{ if ne (.Get "animate" | default "true") "false" }} animate{{ end }}">
+        {{ if .Get "image" }}
+        <a href="{{ .Get "url" }}" target="_blank">
+            <img src="{{ .Get "image" }}" alt="{{ .Get "name" }}" class="max-h-12 grayscale hover:grayscale-0 transition-all duration-300">
+        </a>
+        {{ else }}
+        <a href="{{ .Get "url" }}" target="_blank">
+            <div class="text-xl font-bold text-gray-400">{{ .Get "name" }}</div>
+        </a>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+.logos-slide {
+    display: inline-block;
+}
+
+.logos-slide.animate {
+    animation: 20s slide infinite linear;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+.logo-scroll:hover .logos-slide.animate {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .logos-slide.animate {
+        animation: 12s slide infinite linear;
+    }
+}
+</style>
